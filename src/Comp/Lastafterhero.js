@@ -21,9 +21,9 @@ const Lastafterhero = (props) => {
           eleifend arcu risus id metus. Maecenas ex enim, mattis eu velit vitae,
           blandit mattis sapien. Sed aliquam leo et semper vestibulum."
         </p>
-        <h2>Jack Alvarez
+        <h2>Jatin Vaghela
           <br />
-        <span className="ml-20">Chief Accountant</span>
+        <span className="ml-20">Software developer</span>
         </h2>
       </div>
     </>
