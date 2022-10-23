@@ -1,13 +1,389 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+
+}
+:root{
+    --Font-Bit-Color: rgb(38, 37, 37);
+    --Bg-Col: #ffffff;
+}
+#root{
+    position: relative;
+}
+body{
+    width: 100%;
+    height: 100%;
+    
+}
+.Hero{
+    display: flex;
+    outline:2pc soli red ;
+    background-color: var(--Bg-Col);
+    /* background-color: aquamarine; */
+    isolation: isolate;
+    position: relative;
+    width: 90%;
+    margin-left: 10%;
+    height: auto;
+   overflow: hidden;
+   /* border-radius: 3rem; */
+}
+.HeroD1{
+    display: flex;
+    width: 50%;
+    height: auto;
+    background-color: var(--Bg-Col);
+    isolation: isolate;
+     left: 0%;
+    z-index: 10;
+    position: relative;
+    overflow: visible;
+    flex-direction: column;
+}
+.Hero img{
+     height: 100%;
+    right: 0%;
+    z-index: -1;
+    position: absolute;
+    transform: scale(1.2);
+}
+    
+.HeroD_D{
+    width: 100%;
+    height: auto;
+    /* outline: 2px solid black; */
+}
+.HeroD_1{
+    isolation: isolate;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /* height: 50%; */
+    padding-top: 10rem;
+    flex-direction: row;
+    align-items: center;
+}
+.HeroD_1 .HeroD_D1_1{
+  position: absolute;
+  font-size: clamp(2.5rem , 2.5rem + 2vw , 7rem);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  color:var(--Font-Bit-Color);
+  width: fit-content;
+  margin-left: 10%;
+  font-family: fantasy;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.HeroD_2{
+    display: flex;
+    flex-direction: row;
+    margin-top: clamp(5rem , 5rem + 2vh , 15rem);
+    /* margin-block: 13rem; */
+    margin-bottom: 5rem;
+}
+.HeroD_2  .HeroD_D2_D{
+    width: 100%;
+    /* outline: 2px solid black; */
+    height: 100%;
+    font-size: clamp(2px , 2px + 1.333vh , 2rem);
+}
+.HeroD_1::before{
+    content: "";
+    background-color:var(--Font-Bit-Color);;
+    width: 30%;
+    height: clamp(1%, 1% + 1vh , 30%);
+    position: relative;
+    display: block;
+    top: -200%;
+    right: -10%;
+}
+.HeroD_1::after{
+    content: "";
+    background-color: rgb(255, 255, 0);
+    min-width: 40%;
+    max-width: 50%;
+    height: clamp(2rem , 2rem + 2vw , 30rem);
+    position: relative;
+    display: block;
+    top: 13%;
+    left: -30%;
+    z-index: -3;
+}
+.HeroD_D2_D_Span{
+    
+    margin-inline: 2rem;
+    margin-bottom: 1.3rem;
+    display: block;
+}
+.HeroD_D2_D_a{
+   
+    margin-left: 2rem;
+    /* outline: 2px solid back; */
+    padding-bottom: .5rem;
+    border-bottom: 5px solid yellow;
+}
+.HeroD_D2_D_a:hover{
+    border-bottom: 5px solid rgb(147, 147, 4);
+    
+}
+.colorGrey{
+    
+    color: gray;
+    margin-left: .3rem;
+    /* color: gray; */
+    border-left: 5px solid yellow;
+    padding-left: 1.8rem;
+
+}
+.HeroD_D2_1{
+    padding-bottom: 2rem;
+}
+
+
+/* ====================================================AfterHero=============================================================== */
+
+
+.AfterHero{
+    width: 80%;
+    min-height: 20rem;
+    height: auto;
+    background-color: rgb(227 223 223 / 50%);
+    margin-block: 2rem;
+    margin-inline: auto;
+    padding-left: 4rem;
+    padding-block: 3rem;
+    position: relative;
+    isolation: isolate;
+    /* border-radius: 3rem */
+}
+.AfterHero::after{
+    content: "";
+    border: 5px solid yellow;
+    position: absolute;
+    height: 70%;
+    top: 10%;
+    left: 1%;
+}
+.AfterHero::before{
+    content: "";
+    background-color: var(--Bg-Col);
+    position: absolute;
+    height: 100%;
+    width: 58%;
+    left: 0%;
+    top: 0%;
+    z-index: -3;
+    /* border-top-left-radius: 3rem; */
+    /* border-bottom-left-radius: 3rem; */
+}
+.AfterHero h2{
+    font-size: clamp(.6rem ,.6rem + 2vw , 6rem);
+    font-family: fantasy;
+    color: var(--Font-Bit-Color);
+    width: 50%;
+    
+}
+.AfterHero p{
+    width: 80%;
+    margin-top: 1rem;
+    margin-right: auto;
+    
+    font-size: clamp(2px , 2px + 1.333vh , 2rem);
+}
+
+/* ====================================================Photocase=============================================================== */
+
+
+.Photocase{
+    display: grid;
+    width: 80%;
+    height: auto;
+    background-color: var(--Bg-Col);
+    margin-bottom: 2rem;
+    margin-inline: auto;
+    grid-template-columns: repeat(auto-fit,minmax(15rem, 1fr));
+    gap: 1em;
+    font-size: clamp(2px , 2px + 1.333vh , 2rem);
+}
+.Photocase *{
+   
+    height:clamp(10rem , 15rem + 2vh ,  40rem);
+    /* outline: 2px solid black; */
+    background-size: cover;
+}
+.Photocase_D_1{
+    background-image: url(https://img2.mashed.com/img/gallery/the-ultimate-list-of-your-favorite-fast-food-copycat-recipes/l-intro-1603229426.jpg);
+}
+.Photocase_D_2{
+    background-image: url(https://th.bing.com/th/id/R.f2354bf226543b7faad350af5af41c63?rik=5gvalYCIJXgIcA&riu=http%3a%2f%2farticle.images.consumerreports.org%2fprod%2fcontent%2fdam%2fcro%2fnews_articles%2fhealth%2fCR-Health-Crop-Food-Child-10-16&ehk=k8iMn7NBe5nj6sK5EY%2f%2fNFKRNVn6m898QfAFB9VmzaU%3d&risl=&pid=ImgRaw&r=0);
+    
+}
+.Photocase_D_3{
+    background-image: url(https://th.bing.com/th/id/R.2d20f2a0d512e6769ae55c5eb010c9c9?rik=WhPRuR3tJcDizw&riu=http%3a%2f%2fwww.trbimg.com%2fimg-55ad29ac%2fturbine%2fla-dd-study-fast-food-restaurant-20150720&ehk=3ki1lpRJo7xRYL%2bbmsN4%2fxrYDIAx6M6ua6aSdkHIffw%3d&risl=&pid=ImgRaw&r=0);
+    
+}
+.Photocase_D_4{
+    background-image: url(https://www.ieatgreen.com/wp-content/uploads/2019/05/IMG_4520.jpg);
+    
+}
+.Photocase_D_5{
+    background-image: url(https://www.freshfoodbites.com/wp-content/uploads/2013/10/IMG_1778.jpg);
+    
+}
+.Photocase_D_6{
+    background-image: url(https://leuragarage.com.au/wp-content/uploads/2016/12/food-CWP-IMG_9145Warm-copy.jpg);
+    
+}
+.Photocase_D_7{
+    background-image: url(https://th.bing.com/th/id/R.0ce2c14c310bcbcb7ad600ad05b2751b?rik=7kAa%2byrZFBlHSg&riu=http%3a%2f%2fspringfieldfood.coop%2fwp-content%2fuploads%2f2017%2f04%2fIMG_20170331_124336.jpg&ehk=0w8%2fTjvgVn2quinyQjQGZQR88ZlmSB0kU3KcPRO5ZNA%3d&risl=&pid=ImgRaw&r=0);
+    
+}
+.Photocase_D_8{
+    background-image: url(https://nenafosterfood.com/wp-content/uploads/2017/03/cropped-img_68401.jpg);
+    
+}
+
+.Photocase1{
+    margin-top: 7rem;
+    grid-template-columns: repeat(auto-fit,minmax(12rem, 1fr));
+    gap: 3rem;
+}
+.Photocase_D1{
+    display: flex;
+    /* outline: 2px solid black; */
+    flex-wrap: wrap;
+    flex-direction: column;
+  
+    align-items: center;
+    justify-content: center;
+}
+.Photocase1_D_IMG{
+    height: 50%;
+}
+.Photocase1_D_IMG img{
+    height: 100%;
+    width: 100%;
+}
+.Photocase1_D_Text{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.Photocase1_D_Text h1{
+    font-family: fantasy;
+    display: inline-block;
+    height: auto;
+    font-size: clamp(1rem , 1rem + 2vw , 6rem);
+}
+.Photocase1_D_Text p{
+    height: auto;
+    text-align: center;
+}
+@media screen and (max-width: 550px){
+    .Hero{
+        width: 100%;
+        margin-left: 0%;
+        margin-bottom: 20%;
+     }
+     .HeroD_1{
+        min-height: 40%;
+     }
+     .HeroD_2{
+        flex-wrap: wrap;
+        grid-template-rows: repeat(auto-fit,minmax(clamp(1rem,1rem + 2vw,1000rem),1fr));
+     }
+     .HeroD_D1_1{
+        display: flex;
+        align-items: center;
+    }
+    .HeroD_1 .HeroD_D1_1{
+         font-size: clamp(2rem , 2rem + 2vw , 7rem);
+
+     }
+     .HeroD_2 .HeroD_D2_D{
+       height: 50%;
+    }
+  
+    .HeroD_D2_2{
+        margin-top: 10%;
+
+    }
+    .HeroD_D2_D_Span {
+        margin-left: 2rem;
+        margin-right: none;
+        width: inherit;
+     }
+     .colorGrey{
+        margin-left: 0rem;
+     }
+     .HeroD_1::before{
+         top: -100%;
+      }
+
+    .AfterHero{
+        width: 100%;
+        height: 5rem;
+        position: relative;
+        width: 100%;
+        height: 8rem;
+        min-height: 0rem;
+    }
+
+     .AfterHero p{
+        display: flex;
+        position: absolute;
+        top: 10%;
+        flex-wrap: wrap;
+        width: 60%;
+     }
+     .AfterHero h2{
+        position: absolute;
+        top: -20%;
+     }
+     .Photocase{
+       margin-top: 7rem;
+     }
+    
+}
+@media screen and (min-width: 1440px){
+    
+    .HeroD_1 .HeroD_D1_1{
+        font-size: clamp(3rem , 3rem + 2vw , 10rem);
+
+    }
+    .AfterHero{
+        margin-block: 5rem;
+    }
+    .Photocase1{
+        grid-template-columns: repeat(auto-fit,minmax(20rem, 1fr));
+     }
+}
+@media screen and (min-width: 2560px){
+    .Hero{
+        height: 90rem;
+    }
+    .HeroD1{
+        margin-block: auto;
+    }
+  .Photocase{
+    grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr))
+  }
+  .Photocase * {
+    height: clamp(10rem , 30rem + 2vh , 40rem);
+  }
+  .Photocase1{
+    grid-template-columns: repeat(auto-fit,minmax(31rem, 1fr));
+ }
+  .Photocase1_D_IMG ,
+  .Photocase1_D_Text{
+    height: 50%;
+   }
 }
