@@ -274,7 +274,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 .Photocase1_D_Text h1{
@@ -286,6 +285,114 @@ body{
 .Photocase1_D_Text p{
     height: auto;
     text-align: center;
+    
+}
+
+
+/* ========================================================Imgtextcards====================================================================== */
+
+.Imgtextcards1{
+    display: grid;
+    width: 100%;
+    height: 30rem;
+    margin-top: 5rem;
+    grid-template-columns: 1fr 1fr;
+}
+.Imgtextcards1D_img{
+    display: flex;
+    background-color: var(--Bg-Col);
+    height: 100%;
+    width: 100%;
+    padding-top: 2rem;
+    padding-left: 5rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+   
+}
+.Imgtextcards1D_img h2{
+    font-family: fantasy;
+    display: inline-block;
+    height: auto;
+    font-size: clamp(1rem , 1rem + 2vw , 6rem);
+    margin-bottom: 1rem;
+    position: relative;
+    isolation: isolate;
+}
+.Imgtextcards1D_img h2::after{
+    content: "";
+    position: absolute;
+    background-color: yellow;
+    width: 45%;
+    height: 100%;
+    top: 0%;
+    right: 0%;
+    z-index: -1;
+}
+.Imgtextcards1D_img p,
+.Imgtextcards1D_img a{
+    font-size: clamp(2px , 4px + 1.333vh , 5rem);
+    margin-right: 2rem;
+}
+.Imgtextcards1D_img a{
+    margin-top: 2rem;
+    padding-bottom: .5rem;
+    border-bottom: 5px solid yellow;
+}
+.Imgtextcards1D_img a:hover{
+    border-color: #8d8d00;
+}
+.Imgtextcards1D_text{
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    background-image: url("//images01.nicepage.com/d9/62/d962208d4921b6c2f7de9b7ea291122d.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.Imgtextcards2D_text{
+    background-image:url("//images01.nicepage.com/7d/e3/7de33e0b3b5a270c4ed54706cd2a70f8.jpeg");
+}
+
+/* =================================================================Lastafterhero=========================================================== */
+.Lastafterhero{
+    width: 80%;
+    min-height: 20rem;
+    height: auto;
+    background-color: rgb(227 223 223 / 50%);
+    margin-block: 2rem;
+    margin-inline: auto;
+    padding-left: 4rem;
+    padding-block: 3rem;
+    position: relative;
+    isolation: isolate;
+    /* border-radius: 3rem */
+}
+.Lastafterhero::before {
+    content: "";
+    background-color: var(--Bg-Col);
+    position: absolute;
+    height: 100%;
+    width: 58%;
+    left: 0%;
+    top: 0%;
+    z-index: -3;
+}
+.Lastafterhero h2{
+    font-size: clamp(1rem , 1rem + 2vw , 6rem);
+}
+.Lastafterhero h2 span{
+    font-size: clamp(2px , 4px + 1.333vh , 5rem);
+}
+.Lastafterhero p{
+   width: 60%;
+   font-size: clamp(2px , 4px + 1.333vh , 5rem);
+   margin-top: 2rem;
+}
+.Lastafterhero img{
+    transform: rotateY(180deg);
+    width: 10%;
 }
 @media screen and (max-width: 550px){
     .Hero{
@@ -351,7 +458,35 @@ body{
      .Photocase{
        margin-top: 7rem;
      }
-    
+     .Imgtextcards1 {
+       display: grid;
+       grid-template-columns: none;
+       grid-template-rows: 1fr 1fr;
+       height: 50rem;
+     }
+    .Lastafterhero{
+        max-height: 20rem;
+        position: relative;
+        isolation: isolate;
+    }
+    .Lastafterhero a{
+        margin-top: 2rem;
+        position: absolute;
+        top: -10%;
+        left: 5%;
+    }
+    .Lastafterhero p{
+        margin-top: 2rem;
+        position: absolute;
+        top: 10%;
+        left: 5%;
+    }
+    .Lastafterhero h2{
+        margin-top: 2rem;
+        position: absolute;
+        bottom: 0%;
+        left: 5%;
+    }
 }
 @media screen and (min-width: 1440px){
     
@@ -365,6 +500,12 @@ body{
     .Photocase1{
         grid-template-columns: repeat(auto-fit,minmax(20rem, 1fr));
      }
+     .Imgtextcards1 {
+        height: 50rem;
+     }
+     .Lastafterhero{
+       margin-top: 5rem;
+    }
 }
 @media screen and (min-width: 2560px){
     .Hero{
@@ -382,8 +523,17 @@ body{
   .Photocase1{
     grid-template-columns: repeat(auto-fit,minmax(31rem, 1fr));
  }
-  .Photocase1_D_IMG ,
+ .Photocase1_D_IMG{
+    height: 50%;
+ }
+ .Photocase1_D_img{
+    padding-left: 20rem;
+ }
+  .Photocase1_D_img ,
   .Photocase1_D_Text{
     height: 50%;
    }
+   .Lastafterhero{
+    margin-top: 10rem;
+ }
 }
